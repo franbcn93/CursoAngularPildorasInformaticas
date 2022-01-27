@@ -13,6 +13,8 @@ import { ProyectosComponentComponent } from './proyectos-component/proyectos-com
 import { QuienesComponentComponent } from './quienes-component/quienes-component.component';
 import { ContactoComponentComponent } from './contacto-component/contacto-component.component';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 const appRoutes: Routes=[
   {path: '', component: HomeComponentComponent},
@@ -31,12 +33,14 @@ const appRoutes: Routes=[
     HomeComponentComponent,
     ProyectosComponentComponent,
     QuienesComponentComponent,
-    ContactoComponentComponent
+    ContactoComponentComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,
+    MatProgressBarModule
   ],
   providers: [ServicioEmpleadosService, EmpleadosService],
   bootstrap: [AppComponent]
